@@ -1,0 +1,145 @@
+<html>
+<head>
+
+
+<script>			<!-- this is the javascript portion, which takes the users input and finds the average -->
+
+function getAverage() {														
+
+	var name = ( document.getElementById("bowlName").value );
+	var score1 = parseFloat( document.getElementById("score1").value );
+	var score2 = parseFloat( document.getElementById("score2").value );
+	var score3 = parseFloat( document.getElementById("score3").value );
+	
+	var average = (score1 + score2 + score3) / 3;
+	
+	var msg1 = "The Bowler's Name is " + name;
+	var msg2 = "Bowling Average is " + average;
+	
+	document.getElementById("output").innerHTML = msg1;
+	document.getElementById("output2").innerHTML = msg2;
+
+
+
+}
+
+</script>
+
+
+
+<style>
+
+body {
+
+		background-color: purple;
+		color: black;
+		font-family: arial;
+		text-align: center;
+		font-weight: bold;
+}
+
+#contentWrap {
+		
+		border: 8px yellow solid;
+		background-color: blue;
+		border-radius: 20px;
+		padding: 15px;
+		width: 900px;
+		margin: 20px auto 0px auto;
+		
+}
+
+#title {
+		font-size: 2.0em; <!-- em is a relative font size to the default size -->
+		border-bottom-width: 20px;
+		border-bottom-style: dotted;
+
+		border-bottom-color: yellow;
+		padding: 15px 0px 20px 0px;
+}
+
+#formDiv {
+		height: 400px;
+		padding-top: 10px;
+}
+
+.enterScore {
+		font-size: 1.5em;
+		margin-top: 20px;
+}
+
+#results {
+		font-size: 1.5em;
+		color: green;
+}
+
+
+
+
+</style>
+
+
+
+
+
+</head>
+<body>
+<div id="contentWrap">
+
+	<div id="title">
+		
+		Bowling Average Calculator
+		
+	</div>
+	
+	<div id="formDiv">
+	
+		<form> <!--buttons-->
+		
+			<div class="enterScore">Enter name of Bowler</div>
+			<input type="text" id="bowlName" size ="20" />
+			
+			<div class="enterScore">Enter score 1</div>
+			<input type="text" id="score1" size ="20" />
+			
+			<div class="enterScore">Enter score 2</div>
+			<input type="text" id="score2" size ="20" />
+			
+			<div class="enterScore">Enter score 3</div>
+			<input type="text" id="score3" size ="20" />
+			
+			<div style="margin-top: 10px;">
+					<input type="button" style="border-radius: 8px;"
+						value="calculate average" onClick="getAverage()"/>
+						
+			</div>
+			
+		</form>
+		
+	</div>	
+	
+	<div id="output" style="margin-top: 25px;"></div>
+	<div id="output2" style="margin-top: 10px;"></div>
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> <!-- this closes contentWrap-->
+
+
+
+</body>
+</html>
